@@ -1,0 +1,21 @@
+<%- include("partials/header"); -%>
+
+  <h1><%=title%></h1>
+  <p><%=content%></p>
+  <form class="" action="/delete/<%=postId%>" method="put">
+    <button class="btn btn-primary" type="submit" name="button">Delete Post</button>
+  </form>
+  <br>
+
+
+  <form class="" action="/edit/<%=postId%>" method="post">
+    <div class="form-group">
+      <label>New Title</label>
+      <input class="form-control" type="text" name="postTitle">
+      <label>New Post</label>
+      <textarea class="form-control" name="postBody" rows="5" cols="30"></textarea>
+    </div>
+    <button class="btn btn-primary" type="submit" name="button">Edit</button>
+  </form>
+
+<%- include("partials/footer"); -%>
